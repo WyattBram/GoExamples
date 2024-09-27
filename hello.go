@@ -6,6 +6,11 @@ func main() {
 	fmt.Println(Hello("Chris"))
 }
 
+const greeting = "Hello, "
+
 func Hello(name string) string {
-	return "Hello, " + name
+	if name == "" {
+		return greeting + "World"
+	}
+	return greeting + name
 }
