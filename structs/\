@@ -1,0 +1,42 @@
+package structs
+
+import "testing"
+
+func TestPerimiter(t *testing.T) {
+	rectangle := Rectangle{6.0, 5.0}
+	circle := Circle{10.0}
+
+	t.Run("Test perimiter function", func(t *testing.T) {
+
+		got := rectangle.area()
+		want := 22.0
+
+		if got != want {
+			t.Errorf("Got: %.2f, Want: %.2f", got, want)
+		}
+
+	})
+
+	t.Run("Test area function for rectangle", func(t *testing.T) {
+
+		got := rectangle.area()
+		want := 30.0
+
+		if got != want {
+			t.Errorf("Got: %.2f, Want: %.2f", got, want)
+		}
+
+	})
+
+	t.Run("Test area function for circle", func(t *testing.T) {
+
+		got := circle.area()
+		want := 314.1592653589793
+
+		if got != want {
+			t.Errorf("Got: %.2f, Want: %.2f", got, want)
+		}
+
+	})
+
+}
